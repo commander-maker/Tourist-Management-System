@@ -1,0 +1,99 @@
+/* Set the full-page background */
+.contact-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('/path-to-your-image/Contact.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  /* Navbar customization */
+  .navbar {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  }
+  
+  /* Contact container styling */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6); /* Add transparency for readability */
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 100px auto;
+    position: sticky; /* Make it sticky */
+    top: 100px; /* Adjust this value so it vanishes before the Navbar */
+    z-index: 5; /* Ensure it stays below the Navbar */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .contact-container.hidden {
+    opacity: 0; /* Make content invisible */
+    transform: translateY(-20px); /* Slide content up slightly */
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .contact-container.visible {
+    opacity: 1; /* Make content visible */
+    transform: translateY(0); /* Reset position */
+    pointer-events: auto; /* Allow interaction */
+  }
+
+  
+  
+  
+  /* Form styling */
+  .contact-form {
+    width: 100%;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Map styling */
+  .map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .contact-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Places image behind everything */
+  }
+  

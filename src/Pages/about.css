@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+    padding: 110px;
+    background-color: #f4f4f4;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .container.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .image {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .image {
+      width: 80%;
+    }
+  }
+  
